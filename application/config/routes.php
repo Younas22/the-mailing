@@ -20,6 +20,7 @@ $route['default_controller'] = 'admin/Admin_dashboard';
 $route['dashboard/email-compose'] = 'admin/Mail/email_compose';
 $route['dashboard/mail-campaign'] = 'admin/Mail/mail_campaign';
 $route['dashboard/send-mail'] = 'admin/Mail/send_mail';
+$route['dashboard/test-mail'] = 'admin/Mail/test_mail';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

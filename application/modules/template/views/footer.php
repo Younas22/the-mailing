@@ -59,7 +59,7 @@ function send_mail() {
 
 
 setTimeout(function(){
-    send_mail();
+    // send_mail();
 }, 10000);
 
 

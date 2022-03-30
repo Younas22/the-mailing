@@ -11,6 +11,22 @@ class Mail extends MY_Controller {
 	} 
 	
 
+	public function test_mail()
+	{
+		// dd(profile());
+		$data['name'] = 'Johen Smith';
+		$data['logo'] = 'http://localhost/corebuilder_data/assets/img/profile/1646740414Screenshot5.png';
+		$data['ajency_name'] = 'Core Builder';
+		$data['ajency_web'] = 'http://tecyoun.com';
+		$data['mail'] = 'abc';
+		$data['password'] = 'xyz';
+		$data['contant_view'] = 'admin/test_mail';
+		/*home email*/
+		// $data['count_users'] = $this->admin_dash->count_users();
+		$this->template->template($data);
+	}
+
+
 	public function email_compose()
 	{
 		// dd(profile());
