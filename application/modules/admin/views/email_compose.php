@@ -134,24 +134,35 @@
                               <div class="compose-mail">
                                 <form method="post" action="<?=base_url('dashboard/mail-campaign')?>">
                                   <div class="form-group">
-                                    <input style="padding: 20px" type="text" name="from" class="form-control" placeholder="From">
+                                    <input style="padding: 20px" type="text" name="from" class="form-control" placeholder="From" value="<?=$mail_template->from?>">
+                                  </div><br><br>
+
+                                  <div class="form-group">
+                                    <input style="padding: 20px" type="text" name="cc" class="form-control" placeholder="CC" value="<?=$mail_template->cc?>">
+                                  </div><br><br>
+
+                                  <div class="form-group">
+                                    <input style="padding: 20px" type="text" name="bcc" class="form-control" placeholder="BCC" value="<?=$mail_template->bcc?>">
                                   </div><br><br>
 
                                   <div class="form-group">
                                     <select class="form-control" name="template">
-                                        <option value="">Select a Email Template</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
+                                        <option value="empty">Select a Email Template</option>
+                                        <?php  if ($mail_template->template == 1) { ?>
+                                          <option value="1" selected="">1</option>
+                                          <option value="2">2</option>
+                                        <?php }else{?>
+                                          <option value="1">1</option>
+                                          <option value="2" selected>2</option>
+                                        <?php } ?>
                                       </select>
                                   </div><br><br>
                                   <div class="form-group">
-                                    <input style="padding: 20px" type="text" name="subject" class="form-control" placeholder="Subject">
+                                    <input style="padding: 20px" type="text" name="subject" class="form-control" placeholder="Subject" value="<?=$mail_template->subject?>">
                                   </div><br><br>
 
                                   <div class="form-group">
-                                    <textarea style="padding: 20px" name="message" class="form-control" placeholder="Message"></textarea>
+                                    <textarea style="padding: 20px" name="message" class="form-control" placeholder="Message"><?=$mail_template->msg?></textarea>
                                   </div>
                                   <br><br>
                                   
@@ -177,7 +188,7 @@
 
                                   <div class="btn-group margin-top-20 ">
                                     <button class="btn btn-primary btn-sm margin-right-10" type="submit"><i
-                                        class="fa fa-check"></i> Send</button>
+                                        class="fa fa-check"></i> Configure </button>
                                   </div>
                                 </form>
                               </div>

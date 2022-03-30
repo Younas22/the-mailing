@@ -46,7 +46,7 @@
         <div class="page-logo">
           <a href="index.html">
             <img alt="" src="<?=base_url('assets')?>/img/logo.png">
-            <span class="logo-default">The Mailing</span> </a>
+            <span class="logo-default" style="font-size: 20px;">The Mailing</span> </a>
         </div>
         <!-- logo end -->
         <ul class="nav navbar-nav navbar-left in">

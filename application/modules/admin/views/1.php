@@ -122,13 +122,13 @@
     <div class="invoice-box" id="important_thing" style="padding: 50px; background-color: white; margin-bottom:40px; margin-top: 40px;">
       
       <div style="background-color: white; display: flex; padding: 5px; display: flex;align-items: center;">
-        <div>
+        <div style="width: 50%; margin-left: 20px;">
           <img src="<?=base_url('assets/img/w-logo.png')?>" alt="Company logo" style="max-width: 350px; max-height: 150px; margin-top: 5px;"/>
         </div>
 
-        <!-- <div style="width: 50%; text-align: right; margin-right: 20px;">
+        <div style="width: 50%; text-align: right; margin-right: 20px;">
           <img src="<?=base_url('assets/img/v_logo.png')?>" alt="Company logo" style="max-width: 250px; max-height: 100px; margin-top: 20px;"/>
-        </div> -->
+        </div>
       </div>WegaTech Technologies<hr>
 
       <style>
