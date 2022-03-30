@@ -119,15 +119,15 @@
     </style>
   </head>
   <body>
-    <div class="invoice-box" id="important_thing" style="background-color: white; margin-bottom:40px; margin-top: 40px;">
+    <div class="invoice-box" id="important_thing" style="padding: 50px; background-color: white; margin-bottom:40px; margin-top: 40px;">
       
       <div style="background-color: #0066ff; display: flex; padding: 5px; display: flex;align-items: center;">
         <div style="width: 50%; margin-left: 20px;">
-          <img src="<?=base_url('assets/img/w_logo.png')?>" alt="Company logo" style="max-width: 130px; max-height: 130px; margin-top: 5px;"/>
+          <img src="<?=base_url('assets/img/w-logo.png')?>" alt="Company logo" style="max-width: 250px; max-height: 130px; margin-top: 5px;"/>
         </div>
 
         <div style="width: 50%; text-align: right; margin-right: 20px;">
-          <img src="<?=base_url('assets/img/v_logo.png')?>" alt="Company logo" style="max-width: 50px; max-height: 50px; margin-top: 20px;"/>
+          <img src="<?=base_url('assets/img/v_logo.png')?>" alt="Company logo" style="max-width: 250px; max-height: 50px; margin-top: 20px;"/>
         </div>
       </div>
       
@@ -197,72 +197,17 @@
 
 
       </div>
-  <h2 style="margin-top:50px;">QC Report: <?=$project_view->projects_title?></h2>
-  <table class="table">
-          <b>Name:</b> <?=get_user_profile($project_view->users_id)->first_name?>
-          <b>Email:</b> <?=get_user_profile($project_view->users_id)->company_email?>
-          <b>Phone:</b> <?=get_user_profile($project_view->users_id)->user_phone?>
-        <tr>
-          <th>Project</th>
-          <th>Type</th>
-          <th>Right</th>
-          <th>Wrong</th>
-          <th>Quantity</th>
-          <th>Start</th>
-          <th>End</th>
-          <th>Overall Accuracy</th>
-      </tr><hr>
-      <tr>
-          <td><?=$project_view->projects_title?></td>
-          <td><?=$project_view->p_type?></td>
-          <td><?=$project_view->_right?></td>
-          <td><?=$project_view->wrong?></td>
-          <td><?=$project_view->quantity?></td>
-          <td><?=date('m-d-Y',strtotime($project_view->start_date))?></td>
-          <td><?=date('m-d-Y',strtotime($project_view->end_date))?></td>
-          <td><?=overall_accuracy_report($project_view->project_id)?></td>
-      </tr>
-  </table>
       <br>
       <br>
 
-      <?php  if ($project_view->qc_report_status == 'reject') { ?>
-      <p>No worries if you have not achieved the benchmark we are still here to offer you another chance, in case you wish to choose a second project or are willing to work on any other projects kindly contact your respective representative.</p>
-      <?php } ?>
-      <!-- <hr> -->
-        <!-- <div style="text-align: justify;"><p>Copyright © 2022 All rights reserved. Data Entry Software by CORE BUILDER. <a href="https://www.thecorebuilder.com/">www.thecorebuilder.com <a href="https://www.thecorebuilder.com/t-c-privacy-policy" style="font-size: 10px;">Read T&C</a></a></p></div> -->
 
-<!-- 
-      <div style="background-color: #0066ff; display: flex; padding: 10px;">
-      <div style="width: 50%; margin-left: 20px;"><h4 style="color: white"><?=$this->session->userdata('logged_in')->company_name?></h4></div>
-
-      <div style="color: white; margin-top: 40px;">
-        <a href="https://www.thecorebuilder.com/" style="color: white">www.thecorebuilder.com</a>
-      </div>
-
-        <div style="width: 50%; text-align: right; margin-right: 20px;">
-          <img src="<?=base_url('assets/img/profile/').$this->session->userdata('logged_in')->company_logo;?>" alt="Company logo" style="max-width: 80px; max-height: 80px; margin-top: 5px;"/>
-        </div>
-      </div> -->
-
-      <div style="background-color: #0066ff; display: flex; padding: 5px;">
-      <div style="width: 50%; margin-left: 20px;"><h2 style="color: white">Core Builder<br><b style="font-size: 15px;">Data Entry Software</b></h2></div>
-
-      <div style="color: white; margin-top: 60px;">
-        <a href="https://www.thecorebuilder.com/" style="color: white; text-decoration: none;">www.thecorebuilder.com</a>
-      </div>
-
-        <div style="width: 50%; text-align: right; margin-right: 20px;">
-          <img src="<?=base_url('assets/img/logo/Core builder Data Entry software for companies 1.png')?>" alt="Company logo" style="max-width: 50px; max-height: 50px; margin-top: 20px;"/>
-        </div>
+      <div style="background-color: #ede7e7; display: flex; padding: 5px; margin: 5px;">
+      <p>The content of this email is confidential and intended for the recipient specified in the message only. It is strictly forbidden to share any part of this message with any third party, without a written consent of the sender. Unauthorized use, disclosure or copying of this message or any part thereof is strictly prohibited and may be unlawful. If you received this message by mistake, please reply to this message and follow with its deletion, so that we can ensure such a mistake does not occur in the future.</p>
       </div>
 
 
       <br>
-      <br>
-      <br>
-      <button onclick="window.print()" id="printPageButton">Print this page</button>
-<a href="<?= base_url('company/qc-report') ?>" class="btn btn-primary waves-effect waves-light mg-b-15 col-md-4" style="margin-top: 20px; margin-right: 20px; margin-bottom: 70px;">Back to QC Report</a>
+
 
     </div>
   </body>

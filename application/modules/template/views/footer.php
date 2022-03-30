@@ -50,7 +50,7 @@ function send_mail() {
         dataType:"json",
         cache: false,
         success: function(dataResult){
-            alert(dataResult);
+            // alert(dataResult);
             location.reload();
         }
 
@@ -59,7 +59,7 @@ function send_mail() {
 
 
 setTimeout(function(){
-    // send_mail();
+    send_mail();
 }, 10000);
 
 

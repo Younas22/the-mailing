@@ -60,27 +60,31 @@ class Mail extends MY_Controller {
 	public function send_mail()
 	{
 		// echo "ok";
-		// $mail = $this->db->where('status','0')->order_by('id','asc')->limit(1)->get('mail')->row();
-		
+			$mail = $this->db->where('status','0')->order_by('id','asc')->limit(1)->get('mail')->row();
+			$mail_template = $this->db->where('id',1)->get('mail_template')->row();
 
-			// $data['name'] = 'Johen Smith';
-			// $data['logo'] = 'http://localhost/corebuilder_data/assets/img/profile/1646740414Screenshot5.png';
-			// $data['ajency_name'] = 'Core Builder';
-			// $data['ajency_web'] = 'http://tecyoun.com';
-			// $data['mail'] = 'abc';
-			// $data['password'] = 'xyz';
-	        // $msg = $this->load->view('company/mail/accuracy_report',$data,true);
-	        // $this->email->message($msg);
-	  // //       //Send mail
-			// if($this->email->send()){
-				$this->db->where('status','0')->order_by('id','asc')->limit(1)->update('mail',array('status'=>'1'));
+			$data['name'] = 'Johen Smith';
+			$data['logo'] = 'http://localhost/corebuilder_data/assets/img/profile/1646740414Screenshot5.png';
+			$data['ajency_name'] = 'Core Builder';
+			$data['ajency_web'] = 'http://tecyoun.com';
+			$data['mail'] = 'abc';
+			$data['password'] = 'xyz';
 
-			// 	echo "Yes";
-			// }else{
-			// 	echo "No";
-			// }
+	        $this->load->library('email');
+	        $this->email->from($mail_template->form, 'alphaexposofts');
+	        $this->email->to($mail->email);
+	        $this->email->subject('Login details');
+	        $msg = $this->load->view('admin/test_mai',$data,true);
+	        $this->email->message($msg);
+	  //       //Send mail
+			if($this->email->send()){
+			$this->db->where('status','0')->order_by('id','asc')->limit(1)->update('mail',array('status'=>'1'));
+				echo json_encode('Yes');
+			}else{
+				echo json_encode('No');
+			}
 		
-			echo json_encode('ok');
+			
 
 	}
 }
