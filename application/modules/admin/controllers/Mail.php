@@ -10,7 +10,7 @@ class Mail extends MY_Controller {
 		$this->load->model('Admin_dashboard_M','admin_dash');
 	} 
 	
-
+ 
 	public function test_mail()
 	{
 		// dd(profile());
@@ -23,7 +23,7 @@ class Mail extends MY_Controller {
 		$data['ajency_web'] = 'http://tecyoun.com';
 		$data['mail'] = 'abc';
 		$data['password'] = 'xyz';
-		$data['contant_view'] = 'admin/1';
+		$data['contant_view'] = 'admin/test_mail';
 		/*home email*/
 		// $data['count_users'] = $this->admin_dash->count_users();
 		$this->template->template($data);
