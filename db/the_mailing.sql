@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 29, 2022 at 03:12 PM
+-- Generation Time: Apr 01, 2022 at 05:02 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -38,8 +38,8 @@ CREATE TABLE `mail` (
 --
 
 INSERT INTO `mail` (`id`, `email`, `status`) VALUES
-(1, 'phpfiverrpk@gmail.com', '1'),
-(2, 'muhammadsadique116@gmail.com', '1');
+(1, 'phpfiverrpk@gmail.com', '0'),
+(2, 'muhammadsadique116@gmail.com', '0');
 
 -- --------------------------------------------------------
 
@@ -50,6 +50,8 @@ INSERT INTO `mail` (`id`, `email`, `status`) VALUES
 CREATE TABLE `mail_template` (
   `id` int(11) NOT NULL,
   `from` varchar(255) DEFAULT NULL,
+  `cc` varchar(255) DEFAULT NULL,
+  `bcc` varchar(255) DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
   `subject` varchar(255) DEFAULT NULL,
   `msg` text DEFAULT NULL,
@@ -61,8 +63,8 @@ CREATE TABLE `mail_template` (
 -- Dumping data for table `mail_template`
 --
 
-INSERT INTO `mail_template` (`id`, `from`, `name`, `subject`, `msg`, `template`, `status`) VALUES
-(1, 'hm.younas22@gmail.com', NULL, 'contact ', 'abc', 3, 1);
+INSERT INTO `mail_template` (`id`, `from`, `cc`, `bcc`, `name`, `subject`, `msg`, `template`, `status`) VALUES
+(1, 'hm.younas22@gmail.com', 'hm.younas22@gmail.com', 'hm.younas22@gmail.com', NULL, 'contact ', 'The content of this email is confidential and intended for the recipient specified in the message only. It is strictly forbidden to share any part of this message with any third party, without a written consent of the sender. Unauthorized use, disclosure or copying of this message or any part thereof is strictly prohibited and may be unlawful. If you received this message by mistake, please reply to this message and follow with its deletion, so that we can ensure such a mistake does not occur in the future.The content of this email is confidential and intended for the recipient specified in the message only. It is strictly forbidden to share any part of this message with any third party, without a written consent of the sender. \r\n\r\n<b>Hello</b>\r\n\r\n<br><br>Unauthorized use, disclosure or copying of this message or any part thereof is strictly prohibited and may be unlawful. If you received this message by mistake, please reply to this message and follow with its deletion, so that we can ensure such a mistake does not occur in the future.The content of this email is confidential and intended for the recipient specified in the message only. It is strictly forbidden to share any part of this message with any third party, without a written consent of the sender. Unauthorized use, disclosure or copying of this message or any part thereof is strictly prohibited and may be unlawful. If you received this message by mistake, please reply to this message and follow with its deletion, so that we can ensure such a mistake does not occur in the future.', 1, 1);
 
 -- --------------------------------------------------------
 

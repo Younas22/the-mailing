@@ -23,7 +23,7 @@ class Mail extends MY_Controller {
 		$data['ajency_web'] = 'http://tecyoun.com';
 		$data['mail'] = 'abc';
 		$data['password'] = 'xyz';
-		$data['contant_view'] = 'admin/test_mail';
+		$data['contant_view'] = 'admin/2';
 		/*home email*/
 		// $data['count_users'] = $this->admin_dash->count_users();
 		$this->template->template($data);

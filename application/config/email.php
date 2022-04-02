@@ -14,7 +14,21 @@
 // );
 
 
+// $config = array(
+//      'protocol' => 'smtp',
+//     'smtp_host' => 'mail.tecyoun.com', 
+//     'smtp_port' => 465,
+//     'smtp_user' => 'info@tecyoun.com',
+//     'smtp_pass' => 'Asadarfa0',
+//     'smtp_crypto' => 'ssl', //can be 'ssl' or 'tls' for example
+//     'mailtype' => 'html', //plaintext 'text' mails or 'html'
+//     'smtp_timeout' => '4', //in seconds
+//     'charset' => 'iso-8859-1',
+//     'wordwrap' => TRUE
+// );
 
+
+//test1@A09
         $config = array();
         $config['useragent']           = "CodeIgniter";
         $config['mailpath']            = "/usr/bin/sendmail"; // or "/usr/sbin/sendmail"

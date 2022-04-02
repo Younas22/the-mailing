@@ -32,7 +32,7 @@
       .invoice-box {
         max-width: 800px;
         margin: auto;
-        padding: 30px;
+        /*padding: 30px;*/
         border: 1px solid #eee;
         /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);*/
         font-size: 16px;
@@ -119,17 +119,17 @@
     </style>
   </head>
   <body>
-    <div class="invoice-box" id="important_thing" style="padding: 50px; background-color: white; margin-bottom:40px; margin-top: 40px;">
+    <div class="invoice-box" id="important_thing" style="background-color: blue; margin-bottom:40px; margin-top: 40px;">
       
-      <div style="background-color: white; display: flex; padding: 5px; display: flex;align-items: center;">
-        <div>
+      <div style="background-color: #278DBD; display: flex; display: flex;align-items: center;">
+        <div style="width: 50%; margin-left: 20px;">
           <img src="<?=base_url('assets/img/w-logo.png')?>" alt="Company logo" style="max-width: 350px; max-height: 150px; margin-top: 5px;"/>
         </div>
 
-        <!-- <div style="width: 50%; text-align: right; margin-right: 20px;">
+        <div style="width: 50%; text-align: right; margin-right: 20px; display: none;">
           <img src="<?=base_url('assets/img/v_logo.png')?>" alt="Company logo" style="max-width: 250px; max-height: 100px; margin-top: 20px;"/>
-        </div> -->
-      </div>WegaTech Technologies<hr>
+        </div>
+      </div>
 
       <style>
       .table {
@@ -145,17 +145,42 @@
       .tr:nth-child(even) {
       background-color: #dddddd;
       }
+
+      @import url(https://fonts.cdnfonts.com/css/arial);
+      @import url(https://fonts.googleapis.com/css?family=Roboto);
+
+      .title_and_footer{
+        font-family: 'Arial';
+      }
+
+
+      .msg_body{
+        font-family: 'Roboto';
+      }
+
+      .cm{
+         margin: 39px -40px 0;
+      }
       </style>
-      <div style="text-align: justify;"><br><br><br><br>
-        <p style="margin:5px;"><?=$mail_template->msg?></p>
 
-      </div>
-      <br>
-      <br>
+      <div style="background: #F0F0F0">
+        <div style="background: #F8F8F8; border-left: 20px solid #278DBD; border-right:20px solid #278DBD; padding: 40px;"><b class="title_and_footer" style="color: #0D5D91; font-size: 22px">WegaTech Technologies</b>
+          <div style="border-bottom: 1px dotted #D3D3D3;" class="cm"></div>
+        </div>
+
+        
+
+        <!-- <div style="background: #F8F8F8; border-left: 20px solid #278DBD; border-right:20px solid #278DBD; padding: 40px;  border-bottom: 4px dotted #0D5D82;"><b style="color: #0D5D91">WegaTech Technologies</b></div> -->
+        <div style="text-align: justify; background: #F8F8F8; padding-right: 20px; padding-left: 20px; margin-left:20px; margin-right: 20px;  border-bottom: 5px solid #0D5D82; padding-top: 10px; margin-top: -40px">
+          <!-- <b style="margin:20px;">WegaTech Technologies</b><hr> -->
+          <p style="margin:5px; color: #3B3B3B; font-size: 13px" class="msg_body"><?=$mail_template->msg?></p>
+        </div>
 
 
-      <div style="background-color: #ede7e7; display: flex; margin: 5px;">
-      <p style="margin:5px;">The content of this email is confidential and intended for the recipient specified in the message only. It is strictly forbidden to share any part of this message with any third party, without a written consent of the sender. Unauthorized use, disclosure or copying of this message or any part thereof is strictly prohibited and may be unlawful. If you received this message by mistake, please reply to this message and follow with its deletion, so that we can ensure such a mistake does not occur in the future.<br><a href="www.naukri.com">www.naukri.com</a></p>
+
+        <div style="background-color: #F0F0F0; padding: 20px; margin-left:20px; margin-right: 20px;">
+          <p class="title_and_footer" style="margin:5px; color: #8888A3; text-align: justify-all; font-size: 11px">The content of this email is confidential and intended for the recipient specified in the message only. It is strictly forbidden to share any part of this message with any third party, without a written consent of the sender. Unauthorized use, disclosure or copying of this message or any part thereof is strictly prohibited and may be unlawful. If you received this message by mistake, please reply to this message and follow with its deletion, so that we can ensure such a mistake does not occur in the future.<br><a href="www.naukri.com">www.naukri.com</a></p>
+        </div>
       </div>
 
     </div>

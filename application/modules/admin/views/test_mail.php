@@ -157,11 +157,15 @@
       .msg_body{
         font-family: 'Roboto';
       }
+
+      .cm{
+         margin: 39px -40px 0;
+      }
       </style>
 
       <div style="background: #F0F0F0">
         <div style="background: #F8F8F8; border-left: 20px solid #278DBD; border-right:20px solid #278DBD; padding: 40px;"><b class="title_and_footer" style="color: #0D5D91; font-size: 22px">WegaTech Technologies</b>
-          <div style="border-bottom: 1px dotted #D3D3D3; margin: 39px -40px 0;"></div>
+          <div style="border-bottom: 1px dotted #D3D3D3;" class="cm"></div>
         </div>
 
         
@@ -169,7 +173,7 @@
         <!-- <div style="background: #F8F8F8; border-left: 20px solid #278DBD; border-right:20px solid #278DBD; padding: 40px;  border-bottom: 4px dotted #0D5D82;"><b style="color: #0D5D91">WegaTech Technologies</b></div> -->
         <div style="text-align: justify; background: #F8F8F8; padding-right: 20px; padding-left: 20px; margin-left:20px; margin-right: 20px;  border-bottom: 5px solid #0D5D82; padding-top: 10px; margin-top: -40px">
           <!-- <b style="margin:20px;">WegaTech Technologies</b><hr> -->
-          <p style="margin:5px; color: #3B3B3B; font-size: 13px" class="msg_body">The content of this email is confidential and intended for the recipient specified in the message only. It is strictly forbidden to share any part of this message with any third party, without a written consent of the sender. Unauthorized use, disclosure or copying of this message or any part thereof is strictly prohibited and may be unlawful. If you received this message by mistake, please reply to this message and follow with its deletion, so that we can ensure such a mistake does not occur in the future.The content of this email is confidential and intended for the recipient specified in the message only. It is strictly forbidden to share any part of this message with any third party, without a written consent of the sender. Unauthorized use, disclosure or copying of this message or any part thereof is strictly prohibited and may be unlawful. If you received this message by mistake, please reply to this message and follow with its deletion, so that we can ensure such a mistake does not occur in the future.The content of this email is confidential and intended for the recipient specified in the message only. It is strictly forbidden to share any part of this message with any third party, without a written consent of the sender. Unauthorized use, disclosure or copying of this message or any part thereof is strictly prohibited and may be unlawful. If you received this message by mistake, please reply to this message and follow with its deletion, so that we can ensure such a mistake does not occur in the future.</p>
+          <p style="margin:5px; color: #3B3B3B; font-size: 13px" class="msg_body"><?=$mail_template->msg?></p>
         </div>
 
 
