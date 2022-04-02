@@ -22,4 +22,32 @@ class Admin_dashboard extends MY_Controller {
 		// $data['count_users'] = $this->admin_dash->count_users();
 		$this->template->template($data);
 	}
+
+
+
+	public function mail()
+	{
+		$this->email->initialize($config);
+		$this->load->library('email');
+		$config = Array(
+		                'protocol' => 'smtp',
+		                'smtp_host' => 'tls://smtp.gmail.com',
+		                'smtp_port' => 587,
+		                'smtp_user' => '******', // your email
+		                'smtp_pass' => '*****', // your password
+		                'smtp_timeout'=>20,
+		                'mailtype' => 'text',
+		                'charset' => 'iso-8859-1',
+		                'newline'=>"\r\n",
+		                'wordwrap' => TRUE
+		               );
+
+		 $this->email->initialize($config);
+		 $this->email->from('***@gmail.com');
+		 $this->email->to('***@gmail.com');
+		 $this->email->subject('Email Test');
+		 $this->email->message('Testing the email class.');  
+		 $this->email->send();
+		 echo $this->email->print_debugger();
+	}
 }
