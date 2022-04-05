@@ -133,18 +133,22 @@
                             <div class="mail-list">
                               <div class="compose-mail">
                                 <form method="post" action="<?=base_url('dashboard/mail-campaign')?>">
+                                  <span>From</span>
                                   <div class="form-group">
                                     <input style="padding: 20px" type="text" name="from" class="form-control" placeholder="From" value="<?=$mail_template->from?>">
                                   </div><br><br>
 
+                                  <span>CC</span>
                                   <div class="form-group">
                                     <input style="padding: 20px" type="text" name="cc" class="form-control" placeholder="CC" value="<?=$mail_template->cc?>">
                                   </div><br><br>
 
+                                  <span>BCC</span>
                                   <div class="form-group">
                                     <input style="padding: 20px" type="text" name="bcc" class="form-control" placeholder="BCC" value="<?=$mail_template->bcc?>">
                                   </div><br><br>
 
+                                  <span>Email Template</span>
                                   <div class="form-group">
                                     <select class="form-control" name="template">
                                         <option value="empty">Select a Email Template</option>
@@ -157,12 +161,36 @@
                                         <?php } ?>
                                       </select>
                                   </div><br><br>
+                                  <span>First Subject</span>
                                   <div class="form-group">
-                                    <input style="padding: 20px" type="text" name="subject" class="form-control" placeholder="Subject" value="<?=$mail_template->subject?>">
+                                    <input style="padding: 20px" type="text" name="subject" class="form-control" placeholder="First Subject" value="<?=$mail_template->subject?>">
                                   </div><br><br>
 
+                                  <span>First Message</span>
                                   <div class="form-group">
-                                    <textarea style="padding: 20px" name="message" class="form-control" placeholder="Message"><?=$mail_template->msg?></textarea>
+                                    <textarea style="padding: 20px" name="msg" class="form-control" placeholder="First Message"><?=$mail_template->msg?></textarea>
+                                  </div>
+
+                                  <br><br>
+                                  <span>Second Subject</span>
+                                  <div class="form-group">
+                                    <input style="padding: 20px" type="text" name="subject_2" class="form-control" placeholder="Second Subject" value="<?=$mail_template->subject_2?>">
+                                  </div><br><br>
+
+                                  <span>Second Message</span>
+                                  <div class="form-group">
+                                    <textarea style="padding: 20px" name="msg_2" class="form-control" placeholder="Second Message"><?=$mail_template->msg_2?></textarea>
+                                  </div>
+
+                                  <br><br>
+                                  <span>Therd Subject</span>
+                                  <div class="form-group">
+                                    <input style="padding: 20px" type="text" name="subject_3" class="form-control" placeholder="Therd Subject" value="<?=$mail_template->subject_3?>">
+                                  </div><br><br>
+
+                                  <span>Therd Message</span>
+                                  <div class="form-group">
+                                    <textarea style="padding: 20px" name="msg_3" class="form-control" placeholder="Therd Message"><?=$mail_template->msg_3?></textarea>
                                   </div>
                                   <br><br>
                                   
